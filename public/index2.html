@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planifica+ - Estrategias empresariales modernas, planificación estratégica y crecimiento empresarial. Transformamos ideas en resultados.">
+    <meta name="keywords" content="planificación estratégica, consultoría empresarial, crecimiento empresarial, estrategias, innovación">
+    <meta name="author" content="Planifica+">
+    <meta property="og:title" content="Planifica+ - Planificación Estratégica Empresarial">
+    <meta property="og:description" content="Transformamos tu visión empresarial en estrategias exitosas. Planificación, innovación y crecimiento.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://planificamas.com.mx">
+    
+    <title>Planifica+ | Planificación Estratégica Empresarial</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Enhanced Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-logo">Planifica+</div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">Cargando... 0%</div>
+        </div>
+    </div>
+
+    <!-- Smooth Scroll Indicator -->
+    <div class="smooth-scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span>Planifica+</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">¿Quiénes Somos?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-grid">
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="mega-menu-title">Marketing Digital</div>
+                                    <div class="mega-menu-desc">Potenciamos tu marca con estrategias de alto impacto en redes sociales, publicidad digital, SEO y contenido persuasivo.</div>
+                                </a>
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="mega-menu-title">Planificación y Estrategia</div>
+                                    <div class="mega-menu-desc">Desde la planificación estratégica hasta la optimización del cambio organizacional, desarrollamos hojas de ruta personalizadas.</div>
+                                </a>
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <div class="mega-menu-title">Branding</div>
+                                    <div class="mega-menu-desc">Entendemos que tu marca es mucho más que un logotipo. Es una experiencia emocional que conecta con tu audiencia.</div>
+                                </a>
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="mega-menu-title">Desarrollo Tecnológico</div>
+                                    <div class="mega-menu-desc">Creamos sitios web de alto rendimiento, soluciones digitales personalizadas y sistemas optimizados.</div>
+                                </a>
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="mega-menu-title">E-commerce</div>
+                                    <div class="mega-menu-desc">Desarrollamos plataformas de comercio electrónico personalizadas, optimizadas para la conversión y con integración de pagos seguros.</div>
+                                </a>
+                                <a href="#services" class="mega-menu-item">
+                                    <div class="mega-menu-icon">
+                                        <i class="fas fa-users-cog"></i>
+                                    </div>
+                                    <div class="mega-menu-title">Servicios Estratégicos</div>
+                                    <div class="mega-menu-desc">Pensado para empresas que buscan excelencia, liderazgo real y diferenciación en mercados competitivos.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn-contact">CONTÁCTANOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero parallax-container">
+        <div id="particles-js"></div>
+        <div class="parallax-layer parallax-bg"></div>
+        <div class="floating-shape floating-element"></div>
+        <div class="floating-shape floating-element"></div>
+        <div class="floating-shape floating-element"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-content">
+                        <h1>Planifica tu <span style="color: var(--primary-color);">Éxito</span> Empresarial</h1>
+                        <p>En Planifica+, combinamos innovación empresarial y estrategias digitales para generar resultados medibles y crecimiento sostenible.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn-primary-gradient pulse morph-btn">
+                                <span class="btn-text">IMPULSA TU NEGOCIO AHORA</span>
+                            </a>
+                            <a href="#about" class="btn-outline-gradient">Conocer Más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Planificación Estratégica" class="img-fluid floating-element">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nuestros Servicios</h2>
+                <p>En Planifica+, combinamos innovación empresarial y estrategias digitales para generar resultados medibles y crecimiento sostenible</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Planificación y Estrategia</h4>
+                        <p>En Planifica+, la planificación no es documento, es una acción con resultados reales. Diseñamos y ejecutamos estrategias sólidas que aseguren crecimiento, eficiencia y rentabilidad.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-commerce</h4>
+                        <p>Transforma tu visión en una tienda online efectiva y rentable. Creamos plataformas de comercio electrónico optimizadas para maximizar conversiones y ofrecer experiencias seguras.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4>Marketing Digital</h4>
+                        <p>Creamos planes de acción digitales personalizados y efectivos que alineen los objetivos de tu negocio con las oportunidades del mercado.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Desarrollo Tecnológico</h4>
+                        <p>Creamos sitios web que no solo se ven bien, venden mejor. Cada diseño está optimizado para ofrecer experiencias memorables y maximizar conversiones.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>SEO & Analytics</h4>
+                        <p>Posicionamiento SEO y análisis de datos con Google Analytics para mejorar tu visibilidad online y tomar decisiones basadas en datos reales.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card enhanced-card card-glow" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Gestión del Cambio</h4>
+                        <p>Facilitamos la transformación organizacional con metodologías probadas para asegurar una adopción exitosa de nuevas estrategias y procesos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about parallax-container">
+        <div class="parallax-layer parallax-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-text">
+                        <h2>¿Por qué elegir Planifica+?</h2>
+                        <p>Somos especialistas en transformación empresarial con más de 10 años de experiencia ayudando a empresas a alcanzar sus objetivos estratégicos.</p>
+                        <p>Nuestro enfoque integral combina metodologías probadas con innovación tecnológica para crear soluciones que generan resultados tangibles y sostenibles.</p>
+                        
+                        <div class="stats">
+                            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                                <span class="stat-number counter" data-target="500">0</span>
+                                <span class="stat-label">Proyectos</span>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                                <span class="stat-number counter" data-target="98">0</span>
+                                <span class="stat-label">% Éxito</span>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                                <span class="stat-number counter" data-target="10">0</span>
+                                <span class="stat-label">+ Años</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-visual d-flex justify-content-center">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Equipo de trabajo colaborativo" class="img-fluid rounded shadow-lg enhanced-card">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Beneficios Clave</h2>
+                <p>Cada marca es única, por eso diseñamos soluciones hechas a la medida de tus objetivos y necesidades</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="benefit-card enhanced-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Resultados Medibles</h4>
+                        <p>Diseñamos estrategias con objetivos claros y métricas precisas, asegurando un impacto real y crecimiento sostenible.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="benefit-card enhanced-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4>Visión Global</h4>
+                        <p>Ofrecemos soluciones adaptadas a las tendencias internacionales, combinando perspectiva global con estrategias locales efectivas.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="benefit-card enhanced-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Acción Directa</h4>
+                        <p>Pasamos de la estrategia a la ejecución de forma ágil y eficiente, transformando ideas en resultados tangibles rápidamente.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="benefit-card enhanced-card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Crecemos Juntos</h4>
+                        <p>Trabajamos como tu socio estratégico, comprometiéndonos con tu crecimiento a largo plazo y éxito sostenible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>El Plan Perfecto para tu Empresa</h2>
+                <p>Elige la solución que mejor se adapte a las necesidades de tu negocio</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pricing-card enhanced-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="plan-name">STARTUP</div>
+                        <div class="plan-subtitle">Posicionamiento & Atracción</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Wellness (Spas, Gimnasios, Clínicas)</li>
+                            <li><i class="fas fa-check"></i> Restaurantes y Hostelería</li>
+                            <li><i class="fas fa-check"></i> Servicios Financieros</li>
+                            <li><i class="fas fa-check"></i> Consultorías y Agencias</li>
+                            <li><i class="fas fa-check"></i> Startups</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary-gradient">Ver Plan</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pricing-card enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="plan-name">ESENCIAL</div>
+                        <div class="plan-subtitle">Comienza a crear resultados</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Wellness (Spas, Gimnasios, Clínicas)</li>
+                            <li><i class="fas fa-check"></i> Restaurantes y Hostelería</li>
+                            <li><i class="fas fa-check"></i> Servicios Financieros</li>
+                            <li><i class="fas fa-check"></i> Médicos</li>
+                            <li><i class="fas fa-check"></i> Odontólogos</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary-gradient">Ver Plan</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pricing-card featured enhanced-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="plan-name">AVANZADO</div>
+                        <div class="plan-subtitle">Empoderamiento & acción</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> E-Commerce</li>
+                            <li><i class="fas fa-check"></i> Industrial y Manufactura</li>
+                            <li><i class="fas fa-check"></i> Sector Salud (Hospitales)</li>
+                            <li><i class="fas fa-check"></i> Farmacéuticas, Laboratorios</li>
+                            <li><i class="fas fa-check"></i> Medicina Estética</li>
+                        </ul>
+                        <a href="#contact" class="btn-white">Ver Plan</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="pricing-card enhanced-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="plan-name">ÉLITE</div>
+                        <div class="plan-subtitle">Consolidando tu empresa</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Industrial y Manufactura</li>
+                            <li><i class="fas fa-check"></i> E-Commerce Avanzado</li>
+                            <li><i class="fas fa-check"></i> Corporativos</li>
+                            <li><i class="fas fa-check"></i> Sector Salud Completo</li>
+                            <li><i class="fas fa-check"></i> Soluciones Enterprise</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary-gradient">Ver Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Casos de Éxito</h2>
+                <p>Descubre cómo hemos transformado empresas y potenciado su crecimiento</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item enhanced-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tecnología Empresarial">
+                    <div class="portfolio-content">
+                        <h4>Transformación Digital</h4>
+                        <p>Modernización completa de procesos empresariales para una empresa tecnológica líder.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Estrategia de Crecimiento">
+                    <div class="portfolio-content">
+                        <h4>Expansión Internacional</h4>
+                        <p>Estrategia de crecimiento que llevó a una startup a expandirse a 5 países en 18 meses.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item enhanced-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Optimización de Procesos">
+                    <div class="portfolio-content">
+                        <h4>Optimización Operativa</h4>
+                        <p>Reducción del 40% en costos operativos mediante la implementación de procesos eficientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nuestro Equipo</h2>
+                <p>Profesionales expertos comprometidos con tu éxito empresarial</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member enhanced-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Carlos Mendoza</h4>
+                        <div class="role">Director de Estrategia</div>
+                        <p>MBA con 15 años de experiencia en consultoría estratégica y transformación empresarial.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member enhanced-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="team-avatar">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Ana García</h4>
+                        <div class="role">Especialista en Innovación</div>
+                        <p>Experta en transformación digital y procesos de innovación empresarial disruptiva.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member enhanced-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="team-avatar">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Roberto Silva</h4>
+                        <div class="role">Consultor Internacional</div>
+                        <p>Especialista en expansión global con proyectos exitosos en América Latina y Europa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nuestro Proceso</h2>
+                <p>Una metodología probada que garantiza resultados excepcionales</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <h4>Análisis</h4>
+                        <p>Evaluamos tu situación actual y identificamos oportunidades de mejora y crecimiento.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <h4>Estrategia</h4>
+                        <p>Desarrollamos un plan estratégico personalizado alineado con tus objetivos empresariales.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <h4>Implementación</h4>
+                        <p>Ejecutamos la estrategia con metodologías ágiles y acompañamiento constante.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">4</div>
+                        <h4>Optimización</h4>
+                        <p>Monitoreamos resultados y optimizamos continuamente para maximizar el impacto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nuestros Clientes</h2>
+                <p>Empresas que confían en nosotros para su crecimiento y transformación digital</p>
+            </div>
+            
+            <div class="clients-grid">
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-google"></i>
+                    <p class="mt-2">Google Analytics</p>
+                </div>
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-google"></i>
+                    <p class="mt-2">Google Ads</p>
+                </div>
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-chart-pie"></i>
+                    <p class="mt-2">HubSpot</p>
+                </div>
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-store"></i>
+                    <p class="mt-2">E-commerce</p>
+                </div>
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-hospital"></i>
+                    <p class="mt-2">Sector Salud</p>
+                </div>
+                <div class="client-logo enhanced-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-industry"></i>
+                    <p class="mt-2">Manufactura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Ideas que Impulsan</h2>
+                <p>Artículos y recursos para potenciar tu estrategia empresarial</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card enhanced-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">15 Junio 2025</div>
+                            <h3 class="blog-title">¿Por qué tu negocio necesita una estrategia de marketing digital?</h3>
+                            <p class="blog-excerpt">Descubre cómo una estrategia digital bien estructurada puede transformar tu empresa y generar resultados medibles en el mercado actual.</p>
+                            <a href="#" class="read-more">Leer más »</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-image">
+                            <i class="fas fa-funnel-dollar"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">10 Junio 2025</div>
+                            <h3 class="blog-title">Embudos de ventas: Cómo convertir prospectos en clientes leales</h3>
+                            <p class="blog-excerpt">Aprende a diseñar y optimizar embudos de ventas efectivos que conviertan visitantes en clientes recurrentes y aumenten tu ROI.</p>
+                            <a href="#" class="read-more">Leer más »</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card enhanced-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-image">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">5 Junio 2025</div>
+                            <h3 class="blog-title">SEO vs. SEM: ¿Cuál le conviene más a tu negocio?</h3>
+                            <p class="blog-excerpt">Conoce las diferencias entre SEO y SEM, y descubre cuál estrategia se adapta mejor a tus objetivos y presupuesto empresarial.</p>
+                            <a href="#" class="read-more">Leer más »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h2>¡Contáctanos y llevemos tu proyecto al siguiente nivel!</h2>
+                    <p>En Planifica+, transformamos ideas en resultados tangibles. ¡Estamos listos para ayudarte a crecer!</p>
+                    <a href="#contact" class="btn-white pulse">Solicitar Consulta Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contáctanos</h2>
+                <p>Completa el siguiente formulario y uno de nuestros expertos se pondrá en contacto contigo</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre completo *</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                        <div class="valid-feedback">¡Perfecto!</div>
+                                        <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Correo electrónico *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="valid-feedback">¡Email válido!</div>
+                                        <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="telefono">Teléfono de contacto</label>
+                                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                                        <div class="valid-feedback">¡Teléfono válido!</div>
+                                        <div class="invalid-feedback">Por favor ingresa un teléfono válido.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="empresa">Nombre de la empresa</label>
+                                        <input type="text" class="form-control" id="empresa" name="empresa">
+                                        <div class="valid-feedback">¡Excelente!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="servicio">¿Qué servicio te interesa? *</label>
+                                        <select class="form-select" id="servicio" name="servicio" required>
+                                            <option value="">Selecciona un servicio</option>
+                                            <option value="planificacion">Planeación Estratégica Empresarial</option>
+                                            <option value="ecommerce">E-Commerce Personalizado</option>
+                                            <option value="marketing">Marketing Digital</option>
+                                            <option value="desarrollo">Desarrollo Tecnológico</option>
+                                            <option value="seo">SEO y Analytics</option>
+                                            <option value="gestion">Gestión del Cambio</option>
+                                        </select>
+                                        <div class="valid-feedback">¡Perfecto!</div>
+                                        <div class="invalid-feedback">Por favor selecciona un servicio.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="como_supiste">¿Cómo te enteraste de nosotros?</label>
+                                        <select class="form-select" id="como_supiste" name="como_supiste">
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="redes_sociales">Redes sociales</option>
+                                            <option value="google">Google</option>
+                                            <option value="referido">Referido</option>
+                                            <option value="evento">Evento</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">¡Cuéntanos tu empresa o proyecto! *</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Describe tu proyecto, objetivos y cómo podemos ayudarte..." required></textarea>
+                                <div class="valid-feedback">¡Mensaje recibido!</div>
+                                <div class="invalid-feedback">Por favor cuéntanos sobre tu proyecto.</div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn-primary-gradient morph-btn" id="submitBtn">
+                                    <span class="btn-text">Enviar Mensaje</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="liquid-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Planifica+</h4>
+                    <p>Transformamos ideas en estrategias exitosas. Tu socio estratégico para el crecimiento empresarial sostenible.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Desarrollo Tecnológico</h4>
+                    <a href="#services">E-Commerce Personalizado</a><br>
+                    <a href="#services">Hosting de Alto Rendimiento</a><br>
+                    <a href="#services">Optimización de Conversiones (CRO)</a><br>
+                    <a href="#services">Posicionamiento SEO</a><br>
+                    <a href="#services">Google Analytics y Análisis</a>
+                </div>
+                
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Marketing Digital</h4>
+                    <a href="#services">Community Management</a><br>
+                    <a href="#services">Creación de Contenidos</a><br>
+                    <a href="#services">CopyWriting Persuasivo</a><br>
+                    <a href="#services">Google Ads y Meta Ads (SEM)</a><br>
+                    <a href="#blog">Blog y Recursos</a>
+                </div>
+                
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> info@planificamas.com.mx</p>
+                    <p><i class="fas fa-phone"></i> +52 (55) 1234-5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Planifica+. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

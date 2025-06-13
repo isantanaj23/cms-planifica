@@ -10,19 +10,28 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'title',
+        'slug', 
         'description',
-        'price',
-        'is_active'
+        'icon',
+        'image',
+        'is_active',
+        'order'
     ];
 
     protected $casts = [
-        'price' => 'decimal:2',
-        'is_active' => 'boolean'
+        'is_active' => 'boolean',
+        'order' => 'integer'
     ];
 
+    // Scopes útiles
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
+    }
+
+    public function scopeOrdered($query)
+    {
+        return $query->orderBy('order', 'asc');
     }
 }

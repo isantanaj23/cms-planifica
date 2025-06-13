@@ -155,15 +155,13 @@ class ServiceController extends Controller
                 'message' => "Servicio {$status} exitosamente.",
                 'is_active' => $service->is_active
             ]);
+            
         } catch (\Exception $e) {
-            \Log::error('Error en toggleStatus:', [
-                'service_id' => $service->id,
-                'error' => $e->getMessage()
-            ]);
+            \Log::error('Error cambiando estado:', ['error' => $e->getMessage()]);
             
             return response()->json([
                 'success' => false,
-                'message' => 'Error al cambiar estado: ' . $e->getMessage()
+                'message' => 'Error al cambiar el estado del servicio'
             ], 500);
         }
     }

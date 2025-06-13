@@ -10,42 +10,19 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'name',
         'description',
-        'icon',
-        'image',
-        'is_active',
-        'order',
-        'slug'
+        'price',
+        'is_active'
     ];
 
     protected $casts = [
-        'is_active' => 'boolean',
-        'order' => 'integer'
+        'price' => 'decimal:2',
+        'is_active' => 'boolean'
     ];
 
-    /**
-     * Scope para servicios activos
-     */
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
-    }
-
-    /**
-     * Scope para ordenar por orden
-     */
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('order', 'asc');
-    }
-
-    /**
-     * Generar slug automáticamente
-     */
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['title'] = $value;
-        $this->attributes['slug'] = \Str::slug($value);
     }
 }

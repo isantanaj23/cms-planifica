@@ -8,12 +8,20 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Auth\LoginController;
 
 // Página de inicio
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Autenticación
-Auth::routes(['register' => false]);
+// Rutas de autenticación manuales
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Redirección
+Route::get('/home', function () {
+    return redirect('/admin');
+})->middleware('auth');
 
 // Blog público
 Route::prefix('blog')->name('blog.')->group(function () {
@@ -26,18 +34,11 @@ Route::prefix('blog')->name('blog.')->group(function () {
 
 // Rutas de administración
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    
-    // Dashboard principal
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-    
-    // Gestión de servicios
     Route::resource('services', ServiceController::class);
-    
-    // Gestión del blog
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
     
-    // Acciones especiales para posts
     Route::prefix('posts')->name('posts.')->group(function () {
         Route::post('{post}/publish', [PostController::class, 'publish'])->name('publish');
         Route::post('{post}/unpublish', [PostController::class, 'unpublish'])->name('unpublish');
@@ -45,12 +46,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::get('{post}/preview', [PostController::class, 'preview'])->name('preview');
     });
     
-    // Gestión de archivos multimedia
     Route::prefix('media')->name('media.')->group(function () {
         Route::post('upload', [MediaController::class, 'upload'])->name('upload');
         Route::delete('delete', [MediaController::class, 'delete'])->name('delete');
     });
 });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
